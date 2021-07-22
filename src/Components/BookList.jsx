@@ -1,13 +1,13 @@
 import React from 'react';
 import Book from './Book';
 
-const BookList = ({bookList}) => {
+const BookList = ({bookList , removeBook, editBook}) => {
     return (
         <ul className="book-list">
             {
                 bookList.books.map(book => {
                     return(
-                        <Book book={book}/>
+                        <Book book={book} removeBook={removeBook} editBook={editBook}/>
                     );
                 })    
             }
